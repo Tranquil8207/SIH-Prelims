@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #171717;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
