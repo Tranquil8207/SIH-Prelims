@@ -1,23 +1,27 @@
-import { Equation } from "@/components/equation";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-3xl flex-col gap-8 px-6 py-16">
-      <header className="flex flex-col gap-2">
-        <p className="text-sm text-neutral-500">SIH Prelims</p>
-        <h1 className="text-3xl font-semibold tracking-tight">Visual elements</h1>
-        <p className="max-w-xl text-neutral-600">
-          Flowcharts and figures for the deck. Each visual is a route under{" "}
-          <code className="text-neutral-800">/visuals/&lt;name&gt;</code> so a slide can link straight to it.
+    <main className="flow">
+      <header className="flow-banner">
+        <p className="flow-kicker">SIH Prelims</p>
+        <h1>Engine digital twin</h1>
+        <p className="flow-lede">
+          Two figures for the deck. They show the calculation chain. They do not run the engine model.
         </p>
       </header>
-      <section className="flex flex-col gap-4 rounded-xl border border-neutral-200 p-6">
-        <h2 className="text-lg font-medium">Math check</h2>
-        <p>
-          Inline: <Equation tex="E = mc^2" /> and a shared symbol <Equation tex="x \in \R" />.
-        </p>
-        <Equation display tex="\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}" />
-      </section>
+      <div className="toc">
+        <Link href="/visuals/physics" className="toc-card">
+          <span>01</span>
+          <strong>Physics model</strong>
+          <p>Left-to-right plant flow, from flight phase and wear through the cylinder, cooling path, and predicted gauges.</p>
+        </Link>
+        <Link href="/visuals/architecture" className="toc-card">
+          <span>02</span>
+          <strong>Systems architecture</strong>
+          <p>Left-to-right flow from the live measurement through the filter, the anomaly checks, and the pack update.</p>
+        </Link>
+      </div>
     </main>
   );
 }

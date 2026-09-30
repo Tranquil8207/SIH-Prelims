@@ -47,6 +47,13 @@ Equations use [KaTeX](https://katex.org/) (LaTeX). Render them with `Equation` f
 
 Shared symbols live in `mathMacros` in that file. `\R`, `\N`, `\Z`, `\Q`, and `\C` are already defined. Add new ones there so every visual uses the same notation.
 
+## Figures
+
+- [Physics model](http://localhost:3000/visuals/physics) — how the engine model is built and how one step predicts the next state.
+- [Systems architecture](http://localhost:3000/visuals/architecture) — residual, anomaly checks, and the update back into the model.
+
+After deploy, link a slide to `https://<your-domain>/visuals/physics` or `https://<your-domain>/visuals/architecture`.
+
 ## Add a visual
 
 Create `src/app/visuals/<name>/page.tsx`. After deploy, link the slide to `https://<your-domain>/visuals/<name>`.

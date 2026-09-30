@@ -14,4 +14,270 @@ body {
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
+  margin: 0.35rem 0 0;
+}
+
+.flow {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4.5rem;
+}
+
+.flow-banner {
+  background: #0f2c4c;
+  color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 1.4rem 1.3rem;
+}
+
+.flow-kicker {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #b7cbe0;
+}
+
+.flow-banner h1 {
+  margin: 0.3rem 0 0.55rem;
+  font-size: 1.7rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.flow-lede {
+  margin: 0;
+  color: #d5e4f2;
+  line-height: 1.5;
+}
+
+.flow-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.flow-nav a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 0.28rem 0.75rem;
+  font-size: 0.88rem;
+}
+
+.flow-nav a[aria-current="page"] {
+  background: #fff;
+  color: #0f2c4c;
+  border-color: #fff;
+}
+
+.sheet {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f4f6f8;
+}
+
+.sheet-head {
+  flex: none;
+  padding: 12px 16px 10px;
+  background: #fff;
+  border-bottom: 1px solid #e6e8ec;
+}
+
+.sheet-head .flow-banner {
+  padding: 0.9rem 1.1rem 0.85rem;
+}
+
+.sheet-head .flow-banner h1 {
+  font-size: 1.35rem;
+  margin: 0.15rem 0 0.35rem;
+}
+
+.sheet-head .flow-banner {
+  max-width: 52rem;
+}
+
+.canvas-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.canvas {
+  flex: 1;
+  overflow: auto;
+  background-color: #f4f6f8;
+  background-image: radial-gradient(#d5dbe3 1.1px, transparent 1.1px);
+  background-size: 22px 22px;
+}
+
+.canvas-scale {
+  position: relative;
+}
+
+.canvas-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: max-content;
+  padding: 28px 36px 96px;
+  box-sizing: border-box;
+  transform-origin: top left;
+}
+
+.zoom-bar {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.08);
+}
+
+.zoom-bar button {
+  border: 0;
+  background: transparent;
+  color: #101828;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.zoom-bar button:hover {
+  background: #f2f4f7;
+}
+
+.zoom-bar .zoom-level {
+  min-width: 52px;
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.edges {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.cols {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 176px;
+}
+
+.fcol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 262px;
+  flex: none;
+}
+
+.fcol h2 {
+  margin: 0 0 2px;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #667085;
+}
+
+.fnode {
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 10px 24px rgba(16, 24, 40, 0.05);
+  padding: 12px 12px 10px;
+}
+
+.fnode h3 {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  color: #101828;
+}
+
+.fnode p {
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #344054;
+}
+
+.node-eq {
+  margin-top: 0.45rem;
+  overflow-x: auto;
+}
+
+.node-eq .katex {
+  font-size: 0.92em;
+}
+
+.edge-label {
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #d0d5dd;
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 0.68rem;
+  color: #344054;
+  white-space: nowrap;
+}
+
+.toc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.25rem;
+}
+
+.toc-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #e7f1fa;
+  border: 1px solid #c9dced;
+  border-radius: 16px;
+  padding: 1rem 1.15rem;
+}
+
+.toc-card span {
+  color: #3e5670;
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+}
+
+.toc-card strong {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 1.15rem;
+}
+
+.toc-card p {
+  margin: 0.3rem 0 0;
+  color: #1c2b3a;
+  line-height: 1.45;
 }

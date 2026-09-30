@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Visuals",
@@ -6,12 +7,24 @@ export const metadata: Metadata = {
 
 export default function VisualsIndex() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-3xl flex-col gap-3 px-6 py-16">
-      <h1 className="text-2xl font-semibold tracking-tight">Visuals</h1>
-      <p className="text-neutral-600">
-        Add a figure as <code className="text-neutral-800">src/app/visuals/&lt;name&gt;/page.tsx</code>.
-        The slide links to <code className="text-neutral-800">/visuals/&lt;name&gt;</code>.
-      </p>
+    <main className="flow">
+      <header className="flow-banner">
+        <p className="flow-kicker">SIH Prelims</p>
+        <h1>Visuals</h1>
+        <p className="flow-lede">Each figure has its own address for a slide to open.</p>
+      </header>
+      <div className="toc">
+        <Link href="/visuals/physics" className="toc-card">
+          <span>/visuals/physics</span>
+          <strong>Physics model</strong>
+          <p>Plant flow from flight phase to the predicted measurement.</p>
+        </Link>
+        <Link href="/visuals/architecture" className="toc-card">
+          <span>/visuals/architecture</span>
+          <strong>Systems architecture</strong>
+          <p>Residual, anomaly checks, and the pack loaded at the next preflight.</p>
+        </Link>
+      </div>
     </main>
   );
 }
