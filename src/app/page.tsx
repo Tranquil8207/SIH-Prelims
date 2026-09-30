@@ -7,7 +7,7 @@ export default function Home() {
         <p className="flow-kicker">SIH Prelims</p>
         <h1>Engine digital twin</h1>
         <p className="flow-lede">
-          Three figures for the deck. They show the calculation chain and how it is deployed. They do not run the engine model.
+          Three figures for the deck, and a sample mission view for the ground operator. The figures do not run the engine model.
         </p>
       </header>
       <div className="toc">
@@ -25,6 +25,11 @@ export default function Home() {
           <span>03</span>
           <strong>Fleet deployment</strong>
           <p>One hub, many ground nodes, and the aircraft on each node. The aircraft flies the model it took off with. The next model is loaded at a later preflight.</p>
+        </Link>
+        <Link href="/dashboard" className="toc-card">
+          <span>Sample</span>
+          <strong>Mission dashboard</strong>
+          <p>One hot-weather endurance sortie, read from takeoff to landing, with the ground operator&apos;s call.</p>
         </Link>
       </div>
     </main>

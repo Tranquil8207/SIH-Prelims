@@ -29,6 +29,11 @@ export default function VisualsIndex() {
           <strong>Fleet deployment</strong>
           <p>Aircraft, ground node, and hub, including a lost radio or a lost fibre link.</p>
         </Link>
+        <Link href="/dashboard" className="toc-card">
+          <span>/dashboard</span>
+          <strong>Mission dashboard</strong>
+          <p>Sample ground view of one sortie, from takeoff to landing.</p>
+        </Link>
       </div>
     </main>
   );
