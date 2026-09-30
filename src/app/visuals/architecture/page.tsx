@@ -3,7 +3,7 @@ import { Figure, type FlowColumn, type FlowEdge } from "@/components/flowchart";
 
 export const metadata: Metadata = {
   title: "Systems architecture",
-  description: "Left-to-right flow from the predicted measurement through residuals, anomaly checks, and the pack update.",
+  description: "Left-to-right flow from the predicted measurement through residuals, anomaly checks, and the model update.",
 };
 
 const columns: FlowColumn[] = [
@@ -141,7 +141,7 @@ const columns: FlowColumn[] = [
       {
         id: "edge",
         title: "Aircraft",
-        text: "Ingest, the cycle-average prediction, the OEM-limit check, and the roughness check run on board. Land-now and the misfire check remain available if the radio link is lost. The loaded pack is not rewritten in flight.",
+        text: "Ingest, the cycle-average prediction, the OEM-limit check, and the roughness check run on board. Land-now and the misfire check remain available if the radio link is lost. The model loaded before flight is not rewritten in flight.",
       },
       {
         id: "gcs",
@@ -151,7 +151,7 @@ const columns: FlowColumn[] = [
       {
         id: "hub",
         title: "Hub",
-        text: "Healthy hours are used to refit the mission offset. Confirmed faults are written to the signature table. The next pack is signed here. The hub does not issue a land-now call. Simulator logs are excluded from the healthy set.",
+        text: "Healthy hours are used to refit the mission offset. Confirmed faults are written to the signature table. The next model is signed here. The hub does not issue a land-now call. Simulator logs are excluded from the healthy set.",
       },
     ],
   },
@@ -161,14 +161,13 @@ const columns: FlowColumn[] = [
     nodes: [
       {
         id: "pack",
-        title: "Next pack",
-        text: "Contents are the mission-offset table, residual bands, cooling and oil calibration, and the threshold symbols. The pack is loaded at the next preflight.",
+        title: "Next model",
+        text: "Contents are the mission-offset table, residual bands, cooling and oil calibration, and the threshold symbols. It is loaded at the next preflight.",
       },
       {
         id: "back",
         title: "Updated plant",
-        text: "The physics model is unchanged in structure. It receives the revised offset, bands, and calibration. Live wear from the current sortie is not written back into the plant during flight.",
-        eq: String.raw`F \leftarrow \mathrm{pack}\ N{+}1`,
+        text: "The physics model is unchanged in structure. It receives the revised offset, bands, and calibration at the next preflight. Live wear from the current sortie is not written back into the plant during flight.",
       },
     ],
   },
@@ -217,7 +216,7 @@ export default function ArchitecturePage() {
     <Figure
       kicker="Figure 02"
       title="Systems architecture"
-      lede="Dependency flow from the predicted measurement and the live engine, through the residual and the anomaly checks, to the pack loaded at the next preflight."
+      lede="Dependency flow from the predicted measurement and the live engine, through the residual and the anomaly checks, to the model loaded at the next preflight."
       current="architecture"
       columns={columns}
       edges={edges}

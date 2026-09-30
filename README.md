@@ -51,8 +51,11 @@ Shared symbols live in `mathMacros` in that file. `\R`, `\N`, `\Z`, `\Q`, and `\
 
 - [Physics model](http://localhost:3000/visuals/physics) — how the engine model is built and how one step predicts the next state.
 - [Systems architecture](http://localhost:3000/visuals/architecture) — residual, anomaly checks, and the update back into the model.
+- [Fleet deployment](http://localhost:3000/visuals/deployment) — aircraft, ground nodes, and the hub.
 
-After deploy, link a slide to `https://<your-domain>/visuals/physics` or `https://<your-domain>/visuals/architecture`.
+The three figures are written up together in [Architecture.md](Architecture.md).
+
+After deploy, link a slide to `https://<your-domain>/visuals/physics`, `https://<your-domain>/visuals/architecture`, or `https://<your-domain>/visuals/deployment`.
 
 ## Add a visual
 

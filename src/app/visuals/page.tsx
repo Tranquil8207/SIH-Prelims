@@ -22,7 +22,12 @@ export default function VisualsIndex() {
         <Link href="/visuals/architecture" className="toc-card">
           <span>/visuals/architecture</span>
           <strong>Systems architecture</strong>
-          <p>Residual, anomaly checks, and the pack loaded at the next preflight.</p>
+          <p>Residual, anomaly checks, and the model loaded at the next preflight.</p>
+        </Link>
+        <Link href="/visuals/deployment" className="toc-card">
+          <span>/visuals/deployment</span>
+          <strong>Fleet deployment</strong>
+          <p>Aircraft, ground node, and hub, including a lost radio or a lost fibre link.</p>
         </Link>
       </div>
     </main>

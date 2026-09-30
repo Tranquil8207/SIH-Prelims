@@ -28,7 +28,7 @@ type FigureProps = {
   kicker: string;
   title: string;
   lede: string;
-  current: "physics" | "architecture";
+  current: "physics" | "architecture" | "deployment";
   columns: FlowColumn[];
   edges: FlowEdge[];
 };
@@ -54,6 +54,12 @@ export function Figure({ kicker, title, lede, current, columns, edges }: FigureP
               aria-current={current === "architecture" ? "page" : undefined}
             >
               Systems architecture
+            </Link>
+            <Link
+              href="/visuals/deployment"
+              aria-current={current === "deployment" ? "page" : undefined}
+            >
+              Fleet deployment
             </Link>
           </nav>
         </header>

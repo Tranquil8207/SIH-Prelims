@@ -7,7 +7,7 @@ export default function Home() {
         <p className="flow-kicker">SIH Prelims</p>
         <h1>Engine digital twin</h1>
         <p className="flow-lede">
-          Two figures for the deck. They show the calculation chain. They do not run the engine model.
+          Three figures for the deck. They show the calculation chain and how it is deployed. They do not run the engine model.
         </p>
       </header>
       <div className="toc">
@@ -19,7 +19,12 @@ export default function Home() {
         <Link href="/visuals/architecture" className="toc-card">
           <span>02</span>
           <strong>Systems architecture</strong>
-          <p>Left-to-right flow from the live measurement through the filter, the anomaly checks, and the pack update.</p>
+          <p>Left-to-right flow from the live measurement through the filter, the anomaly checks, and the model update.</p>
+        </Link>
+        <Link href="/visuals/deployment" className="toc-card">
+          <span>03</span>
+          <strong>Fleet deployment</strong>
+          <p>One hub, many ground nodes, and the aircraft on each node. The aircraft flies the model it took off with. The next model is loaded at a later preflight.</p>
         </Link>
       </div>
     </main>
