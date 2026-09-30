@@ -15,7 +15,7 @@ export type FleetNode = {
   summary: string;
   x: number;
   y: number;
-  panel: "up" | "down" | "left-up" | "right-up" | "left-down";
+  panel: "up" | "down" | "left-up" | "right-up" | "left-down" | "right-down";
   tone?: "hub";
   details: FleetDetail[];
 };
