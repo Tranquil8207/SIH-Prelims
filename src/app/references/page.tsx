@@ -129,6 +129,9 @@ export default function ReferencesPage() {
                 diesel engine retrofitted to natural-gas spark-ignition, Applied Energy, Volume 248, 2019, Pages
                 95-103, ISSN 0306-2619
               </li>
+              <li>
+                https://www.flyrotax.com/products/916-is-c
+              </li>
             </ul>
           </div>
         </section>
