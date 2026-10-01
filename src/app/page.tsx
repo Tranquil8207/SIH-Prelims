@@ -31,6 +31,11 @@ export default function Home() {
           <strong>Mission dashboard</strong>
           <p>One hot-weather endurance sortie, read from takeoff to landing, with the ground operator&apos;s call.</p>
         </Link>
+        <Link href="/references" className="toc-card">
+          <span>Sources</span>
+          <strong>References</strong>
+          <p>Sources for the figures and the dashboard.</p>
+        </Link>
       </div>
     </main>
   );

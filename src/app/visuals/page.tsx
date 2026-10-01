@@ -34,6 +34,11 @@ export default function VisualsIndex() {
           <strong>Mission dashboard</strong>
           <p>Sample ground view of one sortie, from takeoff to landing.</p>
         </Link>
+        <Link href="/references" className="toc-card">
+          <span>/references</span>
+          <strong>References</strong>
+          <p>Sources for the figures and the dashboard.</p>
+        </Link>
       </div>
     </main>
   );

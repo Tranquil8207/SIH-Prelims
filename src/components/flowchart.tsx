@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import { Equation } from "@/components/equation";
+import { PageNav } from "@/components/page-nav";
 
 export type FlowNode = {
   id: string;
@@ -37,6 +37,12 @@ type Box = { x: number; y: number; w: number; h: number };
 
 type Drawn = { d: string; label?: string; lx: number; ly: number };
 
+const pageHref = {
+  physics: "/visuals/physics",
+  architecture: "/visuals/architecture",
+  deployment: "/visuals/deployment",
+} as const;
+
 export function Figure({ kicker, title, lede, current, columns, edges }: FigureProps) {
   return (
     <main className="sheet">
@@ -45,23 +51,7 @@ export function Figure({ kicker, title, lede, current, columns, edges }: FigureP
           <p className="flow-kicker">{kicker}</p>
           <h1>{title}</h1>
           <p className="flow-lede">{lede}</p>
-          <nav className="flow-nav" aria-label="Figures">
-            <Link href="/visuals/physics" aria-current={current === "physics" ? "page" : undefined}>
-              Physics model
-            </Link>
-            <Link
-              href="/visuals/architecture"
-              aria-current={current === "architecture" ? "page" : undefined}
-            >
-              Systems architecture
-            </Link>
-            <Link
-              href="/visuals/deployment"
-              aria-current={current === "deployment" ? "page" : undefined}
-            >
-              Fleet deployment
-            </Link>
-          </nav>
+          <PageNav current={pageHref[current]} />
         </header>
       </div>
       <FlowCanvas columns={columns} edges={edges} />

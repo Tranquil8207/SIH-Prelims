@@ -527,6 +527,10 @@ body > * {
   background: #f8fafc;
 }
 
+.dash-page {
+  width: 100%;
+}
+
 .dash {
   width: 100%;
   max-width: 68rem;
@@ -549,6 +553,53 @@ body > * {
   margin: 0 0 0.55rem;
   font-size: 1.12rem;
   letter-spacing: -0.015em;
+}
+
+.refs-list {
+  counter-reset: ref;
+}
+
+.refs-group + .refs-group {
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid #eef1f4;
+}
+
+.refs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.refs li {
+  counter-increment: ref;
+  position: relative;
+  padding: 0.6rem 0 0.6rem 1.9rem;
+  border-top: 1px solid #eef1f4;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #344054;
+}
+
+.refs li:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.refs li::before {
+  content: counter(ref) ".";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  color: #3e5670;
+}
+
+.refs li:first-child::before {
+  top: 0;
 }
 
 .dash-kicker {

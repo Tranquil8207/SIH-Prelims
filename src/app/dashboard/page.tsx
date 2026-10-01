@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { PageNav } from "@/components/page-nav";
 
 export const metadata: Metadata = {
   title: "Mission dashboard",
@@ -91,26 +91,21 @@ function HeadTrace() {
 
 export default function DashboardPage() {
   return (
-    <main className="dash">
-      <header className="flow-banner">
-        <p className="flow-kicker">Ground operator · sample sortie</p>
-        <h1>Tail 12 · hot-weather endurance</h1>
-        <p className="flow-lede">
-          Site North. Block 2 h 28 min. The offset for this profile was frozen at preflight, and the aircraft flew
-          the model it took off with until landing. Radio stayed up. These figures are illustrative. This page does
-          not run the model.
-        </p>
-        <nav className="flow-nav" aria-label="Pages">
-          <Link href="/">Home</Link>
-          <Link href="/visuals/physics">Physics model</Link>
-          <Link href="/visuals/architecture">Systems architecture</Link>
-          <Link href="/visuals/deployment">Fleet deployment</Link>
-          <Link href="/dashboard" aria-current="page">
-            Mission dashboard
-          </Link>
-        </nav>
-      </header>
+    <main className="dash-page">
+      <div className="sheet-head">
+        <header className="flow-banner">
+          <p className="flow-kicker">Ground operator · sample sortie</p>
+          <h1>Simulated Mission · hot-weather endurance</h1>
+          <p className="flow-lede">
+            The offset for this profile was frozen at preflight, and the aircraft flew
+            the engineering model comprising what we describe in the pages showing the physics model and systems architecture.
+            These figures are illustrative.
+          </p>
+          <PageNav current="/dashboard" />
+        </header>
+      </div>
 
+      <div className="dash">
       <section className="dash-card dash-health">
         <div>
           <p className="dash-kicker">Overall health across the mission</p>
@@ -257,6 +252,7 @@ export default function DashboardPage() {
           </div>
         </div>
       </section>
+      </div>
     </main>
   );
 }

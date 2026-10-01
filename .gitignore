@@ -1,6 +1,8 @@
 # misc. files
 *.png
 *.jpeg
+
+
 # dependencies
 /node_modules
 /.pnp

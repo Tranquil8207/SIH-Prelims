@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { FleetMap, type FleetDetail, type FleetLink, type FleetNode } from "@/components/fleet-map";
+import { PageNav } from "@/components/page-nav";
 
 export const metadata: Metadata = {
   title: "Fleet deployment",
@@ -210,13 +210,7 @@ export default function DeploymentPage() {
             aircraft flies the model loaded before takeoff. The node explains the sortie. The hub signs the next
             model between flights. A cut link does not stop the computer below it.
           </p>
-          <nav className="flow-nav" aria-label="Figures">
-            <Link href="/visuals/physics">Physics model</Link>
-            <Link href="/visuals/architecture">Systems architecture</Link>
-            <Link href="/visuals/deployment" aria-current="page">
-              Fleet deployment
-            </Link>
-          </nav>
+          <PageNav current="/visuals/deployment" />
         </header>
       </div>
       <FleetMap nodes={nodes} links={links} />
