@@ -17,12 +17,12 @@ export default function VisualsIndex() {
         <Link href="/visuals/physics" className="toc-card">
           <span>/visuals/physics</span>
           <strong>Physics model</strong>
-          <p>Plant flow from flight phase to the predicted measurement.</p>
+          <p>One four-stroke cycle, with every symbol defined where it is used.</p>
         </Link>
         <Link href="/visuals/architecture" className="toc-card">
           <span>/visuals/architecture</span>
           <strong>Systems architecture</strong>
-          <p>Residual, anomaly checks, and the model loaded at the next preflight.</p>
+          <p>Solver order for one cycle, then the residual, the wear update, and the anomaly checks.</p>
         </Link>
         <Link href="/visuals/deployment" className="toc-card">
           <span>/visuals/deployment</span>

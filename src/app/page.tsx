@@ -14,12 +14,12 @@ export default function Home() {
         <Link href="/visuals/physics" className="toc-card">
           <span>01</span>
           <strong>Physics model</strong>
-          <p>Left-to-right plant flow, from flight phase and wear through the cylinder, cooling path, and predicted gauges.</p>
+          <p>One four-stroke cycle, left to right, with every symbol defined on the card that uses it.</p>
         </Link>
         <Link href="/visuals/architecture" className="toc-card">
           <span>02</span>
           <strong>Systems architecture</strong>
-          <p>Left-to-right flow from the live measurement through the filter, the anomaly checks, and the model update.</p>
+          <p>How a cycle is solved, then the residual, the wear update, and the anomaly checks.</p>
         </Link>
         <Link href="/visuals/deployment" className="toc-card">
           <span>03</span>

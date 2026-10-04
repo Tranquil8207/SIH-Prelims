@@ -4,11 +4,18 @@ import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import { Equation } from "@/components/equation";
 import { PageNav } from "@/components/page-nav";
 
+export type FlowDef = {
+  tex: string;
+  meaning: string;
+};
+
 export type FlowNode = {
   id: string;
   title: string;
   text: string;
-  eq?: string;
+  eq?: string | string[];
+  defs?: FlowDef[];
+  tone?: "loop";
 };
 
 export type FlowColumn = {
@@ -143,7 +150,18 @@ function FlowCanvas({ columns, edges }: { columns: FlowColumn[]; edges: FlowEdge
         }
 
         if (edge.via === "below" || span !== 1) {
-          const drop = Math.max(from.y + from.h, to.y + to.h) + 36 + lane * 26;
+          const fromCol = columnOf.get(edge.from) ?? 0;
+          const toCol = columnOf.get(edge.to) ?? 0;
+          const loCol = Math.min(fromCol, toCol);
+          const hiCol = Math.max(fromCol, toCol);
+          let maxBottom = Math.max(from.y + from.h, to.y + to.h);
+          boxes.forEach((box, id) => {
+            const col = columnOf.get(id);
+            if (col !== undefined && col >= loCol && col <= hiCol) {
+              maxBottom = Math.max(maxBottom, box.y + box.h);
+            }
+          });
+          const drop = maxBottom + 36 + lane * 26;
           lane += 1;
           const x1 = from.x + from.w / 2;
           const y1 = from.y + from.h;
@@ -286,17 +304,32 @@ function FlowCanvas({ columns, edges }: { columns: FlowColumn[]; edges: FlowEdge
           {columns.map((column) => (
             <section key={column.id} className="fcol" aria-label={column.title}>
               <h2>{column.title}</h2>
-              {column.nodes.map((node) => (
-                <article key={node.id} className="fnode" data-node={node.id}>
-                  <h3>{node.title}</h3>
-                  <p>{node.text}</p>
-                  {node.eq ? (
-                    <div className="node-eq">
-                      <Equation display tex={node.eq} />
-                    </div>
-                  ) : null}
-                </article>
-              ))}
+              {column.nodes.map((node) => {
+                const equations = node.eq == null ? [] : Array.isArray(node.eq) ? node.eq : [node.eq];
+                return (
+                  <article key={node.id} className={node.tone === "loop" ? "fnode loop" : "fnode"} data-node={node.id}>
+                    <h3>{node.title}</h3>
+                    <p>{node.text}</p>
+                    {equations.map((tex) => (
+                      <div className="node-eq" key={tex}>
+                        <Equation display tex={tex} />
+                      </div>
+                    ))}
+                    {node.defs ? (
+                      <dl className="fdefs">
+                        {node.defs.map((item) => (
+                          <div key={item.tex}>
+                            <dt>
+                              <Equation tex={item.tex} />
+                            </dt>
+                            <dd>{item.meaning}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                    ) : null}
+                  </article>
+                );
+              })}
             </section>
           ))}
         </div>

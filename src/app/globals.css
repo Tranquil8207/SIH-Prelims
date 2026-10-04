@@ -293,7 +293,7 @@ body > * {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 262px;
+  width: 320px;
   flex: none;
 }
 
@@ -314,12 +314,45 @@ body > * {
   padding: 12px 12px 10px;
 }
 
+.fnode.loop {
+  border-color: #0f2c4c;
+}
+
 .fnode h3 {
   margin: 0;
   font-size: 0.92rem;
   font-weight: 650;
   letter-spacing: -0.015em;
   color: #101828;
+}
+
+.fdefs {
+  margin: 0.6rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.32rem;
+}
+
+.fdefs div {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.15rem 0.45rem;
+  align-items: baseline;
+}
+
+.fdefs dt,
+.fdefs dd {
+  margin: 0;
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.fdefs dt {
+  color: #0f2c4c;
+}
+
+.fdefs dd {
+  color: #475467;
 }
 
 .fnode p {
