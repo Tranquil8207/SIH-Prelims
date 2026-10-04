@@ -203,13 +203,15 @@ export default function DeploymentPage() {
     <main className="sheet">
       <div className="sheet-head">
         <header className="flow-banner">
-          <p className="flow-kicker">Figure 03</p>
-          <h1>Fleet deployment</h1>
-          <p className="flow-lede">
-            One hub, one ground node, and the aircraft on that node. Hover a node or a line for its detail. The
-            aircraft flies the model loaded before takeoff. The node explains the sortie. The hub signs the next
-            model between flights. A cut link does not stop the computer below it.
-          </p>
+          <div className="flow-banner-text">
+            <p className="flow-kicker">Figure 03</p>
+            <h1>Fleet deployment</h1>
+            <p className="flow-lede">
+              One hub, one ground node, and the aircraft on that node. Hover a node or a line for its detail. The
+              aircraft flies the model loaded before takeoff. The node explains the sortie. The hub signs the next
+              model between flights. A cut link does not stop the computer below it.
+            </p>
+          </div>
           <PageNav current="/visuals/deployment" />
         </header>
       </div>

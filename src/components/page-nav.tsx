@@ -5,6 +5,7 @@ import Link from "next/link";
 const pages = [
   { href: "/visuals/physics", label: "Physics model" },
   { href: "/visuals/architecture", label: "Systems architecture" },
+  { href: "/faults", label: "Fault mapping" },
   { href: "/visuals/deployment", label: "Fleet deployment" },
   { href: "/dashboard", label: "Mission dashboard" },
   { href: "/references", label: "References" },

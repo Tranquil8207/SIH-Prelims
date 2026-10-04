@@ -194,16 +194,38 @@ body > * {
 }
 
 .sheet-head .flow-banner {
-  padding: 0.9rem 1.1rem 0.85rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.75rem;
+  padding: 0.65rem 1.1rem;
+  max-width: none;
+}
+
+.flow-banner-text {
+  flex: 1 1 380px;
+  min-width: 0;
 }
 
 .sheet-head .flow-banner h1 {
-  font-size: 1.35rem;
-  margin: 0.15rem 0 0.35rem;
+  font-size: 1.2rem;
+  margin: 0.1rem 0 0.3rem;
 }
 
-.sheet-head .flow-banner {
-  max-width: 52rem;
+.sheet-head .flow-nav {
+  margin-top: 0;
+  flex: none;
+}
+
+@media (max-width: 760px) {
+  .sheet-head .flow-banner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sheet-head .flow-nav {
+    margin-top: 0.5rem;
+  }
 }
 
 .canvas-wrap {

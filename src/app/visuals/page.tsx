@@ -24,6 +24,11 @@ export default function VisualsIndex() {
           <strong>Systems architecture</strong>
           <p>Solver order for one cycle, then the residual, the wear update, and the anomaly checks.</p>
         </Link>
+        <Link href="/faults" className="toc-card">
+          <span>/faults</span>
+          <strong>Fault mapping</strong>
+          <p>From a residual to a mechanism, a component, a confirmation test, and a spare.</p>
+        </Link>
         <Link href="/visuals/deployment" className="toc-card">
           <span>/visuals/deployment</span>
           <strong>Fleet deployment</strong>

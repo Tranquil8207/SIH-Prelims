@@ -55,9 +55,11 @@ export function Figure({ kicker, title, lede, current, columns, edges }: FigureP
     <main className="sheet">
       <div className="sheet-head">
         <header className="flow-banner">
-          <p className="flow-kicker">{kicker}</p>
-          <h1>{title}</h1>
-          <p className="flow-lede">{lede}</p>
+          <div className="flow-banner-text">
+            <p className="flow-kicker">{kicker}</p>
+            <h1>{title}</h1>
+            <p className="flow-lede">{lede}</p>
+          </div>
           <PageNav current={pageHref[current]} />
         </header>
       </div>

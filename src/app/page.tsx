@@ -7,7 +7,7 @@ export default function Home() {
         <p className="flow-kicker">SIH Prelims</p>
         <h1>Engine digital twin</h1>
         <p className="flow-lede">
-          Three figures for the deck, and a sample mission view for the ground operator. The figures do not run the engine model.
+          Figures for the deck, a maintenance mapping, and a sample mission view for the ground operator. The figures do not run the engine model.
         </p>
       </header>
       <div className="toc">
@@ -20,6 +20,11 @@ export default function Home() {
           <span>02</span>
           <strong>Systems architecture</strong>
           <p>How a cycle is solved, then the residual, the wear update, and the anomaly checks.</p>
+        </Link>
+        <Link href="/faults" className="toc-card">
+          <span>Maintenance</span>
+          <strong>Fault mapping</strong>
+          <p>From a residual to a mechanism, a component, a confirmation test, and a spare.</p>
         </Link>
         <Link href="/visuals/deployment" className="toc-card">
           <span>03</span>

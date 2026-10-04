@@ -94,13 +94,15 @@ export default function DashboardPage() {
     <main className="dash-page">
       <div className="sheet-head">
         <header className="flow-banner">
-          <p className="flow-kicker">Ground operator · sample sortie</p>
-          <h1>Simulated Mission · hot-weather endurance</h1>
-          <p className="flow-lede">
-            The offset for this profile was frozen at preflight, and the aircraft flew
-            the engineering model comprising what we describe in the pages showing the physics model and systems architecture.
-            These figures are illustrative.
-          </p>
+          <div className="flow-banner-text">
+            <p className="flow-kicker">Ground operator · sample sortie</p>
+            <h1>Simulated Mission · hot-weather endurance</h1>
+            <p className="flow-lede">
+              The offset for this profile was frozen at preflight, and the aircraft flew
+              the engineering model comprising what we describe in the pages showing the physics model and systems architecture.
+              These figures are illustrative.
+            </p>
+          </div>
           <PageNav current="/dashboard" />
         </header>
       </div>

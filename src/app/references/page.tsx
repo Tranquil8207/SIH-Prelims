@@ -10,11 +10,13 @@ export default function ReferencesPage() {
     <main className="dash-page">
       <div className="sheet-head">
         <header className="flow-banner">
-          <p className="flow-kicker">Bibliography</p>
-          <h1>References</h1>
-          <p className="flow-lede">
-            Supporting literature used by our team to design the physics model and the systems architecture.
-          </p>
+          <div className="flow-banner-text">
+            <p className="flow-kicker">Bibliography</p>
+            <h1>References</h1>
+            <p className="flow-lede">
+              Supporting literature used by our team to design the physics model and the systems architecture.
+            </p>
+          </div>
           <PageNav current="/references" />
         </header>
       </div>
