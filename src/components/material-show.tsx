@@ -87,7 +87,7 @@ export function MaterialShow({ sets }: { sets: MaterialSetView[] }) {
   return (
     <div className="mat-list">
       {sets.map((set) => {
-        const thumb = set.files.find((item) => item.kind === "image");
+        const thumb = set.thumb ?? set.files.find((item) => item.kind === "image");
         const documentOnly = !thumb && set.files.some((item) => item.kind === "pdf");
         return (
           <button

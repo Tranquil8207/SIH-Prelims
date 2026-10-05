@@ -17,6 +17,9 @@
 # testing
 /coverage
 
+# generated PDF thumbnails
+/.cache
+
 # next.js
 /.next/
 /out/

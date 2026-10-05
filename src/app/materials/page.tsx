@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default function MaterialsPage() {
-  const sets = listMaterialSets();
+export default async function MaterialsPage() {
+  const sets = await listMaterialSets();
   return (
     <main className="dash-page">
       <div className="sheet-head">
