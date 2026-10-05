@@ -37,9 +37,14 @@ export default function Home() {
           <p>One hot-weather endurance sortie, read from takeoff to landing, with the ground operator&apos;s call.</p>
         </Link>
         <Link href="/references" className="toc-card">
-          <span>Sources</span>
+          <span>Citations</span>
           <strong>References</strong>
-          <p>Sources for the figures and the dashboard.</p>
+          <p>Sources using which we built our physics model, system architecture and fleet deployment model.</p>
+        </Link>
+        <Link href="/materials" className="toc-card">
+          <span>Video stills</span>
+          <strong>Images from the video</strong>
+          <p>Extra pictures and documents we used to make the video, that could not be put in the presentation.</p>
         </Link>
       </div>
     </main>

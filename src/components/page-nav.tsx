@@ -8,6 +8,7 @@ const pages = [
   { href: "/faults", label: "Fault mapping" },
   { href: "/visuals/deployment", label: "Fleet deployment" },
   { href: "/dashboard", label: "Mission dashboard" },
+  { href: "/materials", label: "Materials" },
   { href: "/references", label: "References" },
 ] as const;
 

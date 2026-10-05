@@ -44,6 +44,11 @@ export default function VisualsIndex() {
           <strong>References</strong>
           <p>Sources for the figures and the dashboard.</p>
         </Link>
+        <Link href="/materials" className="toc-card">
+          <span>/materials</span>
+          <strong>Images from the video</strong>
+          <p>Pictures and documents used to make the video. An image set opens as a slideshow.</p>
+        </Link>
       </div>
     </main>
   );

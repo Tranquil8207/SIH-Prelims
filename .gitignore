@@ -1,6 +1,7 @@
 # misc. files
 *.png
 *.jpeg
+!Ref materials/**/*.jpeg
 
 
 # dependencies
